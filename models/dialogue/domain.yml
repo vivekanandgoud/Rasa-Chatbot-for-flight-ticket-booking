@@ -1,0 +1,125 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_ask_depature
+- utter_ask_destination
+- utter_ask_date
+- action_get_flights
+- utter_ask_connection
+- utter_confirm
+- utter_help
+- utter_anything_else
+- utter_ofc
+- utter_bye
+- utter_default
+- action_restart
+- action_get_news
+config:
+  store_entities_as_slots: true
+entities:
+- category
+- departure
+- destination
+- date
+- connection
+- name
+- mobile_number
+- id_number
+forms: []
+intents:
+- greet:
+    use_entities: true
+- fine_ask:
+    use_entities: true
+- fine_ask1:
+    use_entities: true
+- fine_ask_depature:
+    use_entities: true
+- fine_ask_destination:
+    use_entities: true
+- fine_ask_date:
+    use_entities: true
+- fine_ask_connection:
+    use_entities: true
+- confirmindex:
+    use_entities: true
+- fine_ask2:
+    use_entities: true
+- fine_ask3:
+    use_entities: true
+- fine_normal:
+    use_entities: true
+- thanks:
+    use_entities: true
+- bye:
+    use_entities: true
+slots:
+  category:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  connection:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  date:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  departure:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  destination:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  id_number:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  matches:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.UnfeaturizedSlot
+  mobile_number:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  name:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  row_no:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_connection:
+  - text: please confirm connection flight Yes or No?
+  - text: please choose connection flight Yes or No?
+  utter_ask_date:
+  - text: Sure. Please let me know date of travel?.
+  - text: Sure. Please let me know travel date?
+  utter_ask_depature:
+  - text: Sure. Please let me know Depature location?.
+  - text: Sure. Please let me know From location??
+  utter_ask_destination:
+  - text: Sure. Please let me know destination location?.
+  - text: Sure. Please let me know To location??
+  utter_bye:
+  - text: Bye and have a nice day
+  - text: Bbye and have a nice day
+  utter_confirm:
+  - text: Congratulations **** Your Flight Booked succesfully.ref.No:43HL0004567600034"
+  utter_default:
+  - text: I am not sure what you're aiming for
+  - text: I am sorry but I am not able to get you.
+  - text: My appologies but I am not able to get you
+  utter_greet:
+  - text: Hey, HI I am Flight ticket booking chatbot  i can help you to book tickets.
+  - text: Hello, I am Flight ticket booking chatbot.i can help you to book tickets.
+  utter_ofc:
+  - text: I can definitely help you. let me know destination for {category}
+  - text: Surely, I can help you. The top 5 news of the {category}

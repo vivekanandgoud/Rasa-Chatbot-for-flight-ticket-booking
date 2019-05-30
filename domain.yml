@@ -1,0 +1,93 @@
+slots:
+  category:
+    type: text
+  departure:
+    type: text
+  destination:
+    type: text
+  connection:
+    type: text
+  date:
+    type: text
+  name:
+    type: text
+  mobile_number:
+    type: text
+  id_number:
+    type: text
+  row_no:
+    type: text
+  matches:
+    type: unfeaturized    
+    
+    
+    
+entities:
+- category
+- departure
+- destination
+- date
+- connection
+- name
+- mobile_number
+- id_number
+
+intents:
+- greet
+- fine_ask
+- fine_ask1
+- fine_ask_depature
+- fine_ask_destination
+- fine_ask_date
+- fine_ask_connection
+- confirmindex
+- fine_ask2
+- fine_ask3
+- fine_normal
+- thanks
+- bye
+
+actions:
+- utter_greet
+- utter_ask_depature
+- utter_ask_destination
+- utter_ask_date
+- action_get_flights
+- utter_ask_connection
+- utter_confirm
+- utter_help
+- utter_anything_else
+- utter_ofc
+- utter_bye
+- utter_default
+- action_restart
+- action_get_news
+
+templates:
+  utter_greet:
+    - text: Hey, HI I am Flight ticket booking chatbot  i can help you to book tickets. 
+    - text: Hello, I am Flight ticket booking chatbot.i can help you to book tickets.
+  utter_ask_depature:
+    - text: Sure. Please let me know Depature location?.
+    - text: Sure. Please let me know From location??
+  utter_ask_destination:
+    - text: Sure. Please let me know destination location?.
+    - text: Sure. Please let me know To location?? 
+  utter_ask_date:
+    - text: Sure. Please let me know date of travel?.
+    - text: Sure. Please let me know travel date?
+  utter_confirm:
+    - text: Congratulations **** Your Flight Booked succesfully.ref.No:43HL0004567600034"
+  utter_ask_connection:
+    - text: please confirm connection flight Yes or No?
+    - text: please choose connection flight Yes or No?
+  utter_ofc:
+    - text: I can definitely help you. let me know destination for {category}
+    - text: Surely, I can help you. The top 5 news of the {category}
+  utter_bye:
+    - text: Bye and have a nice day
+    - text: Bbye and have a nice day
+  utter_default:
+    - text: I am not sure what you're aiming for
+    - text: I am sorry but I am not able to get you.
+    - text: My appologies but I am not able to get you
