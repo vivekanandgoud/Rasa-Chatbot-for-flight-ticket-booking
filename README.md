@@ -21,7 +21,7 @@ python3 -m rasa_core_sdk.endpoint --actions actions
 ```
 python3 -m rasa_core.run -d models/dialogue -u models/current/nlu --endpoints endpoints.yml
 ```
-##Out Put 
+***Out Put 
 ```
 Your input ->  hi Bot
 Hey, HI I am Flight ticket booking chatbot  i can help you to book tickets.
