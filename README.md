@@ -1,25 +1,25 @@
 
 **Train Rasa NLU**
 ```
-python3 -m rasa_nlu.train -c nlu_config.yml --data data/nlu.md -o models --fixed_model_name nlu --project current --verbose
+python -m rasa_nlu.train -c nlu_config.yml --data data/nlu.md -o models --fixed_model_name nlu --project current --verbose
 ```
 **Run Rasa NLU**
 ```
-python3 -m rasa_nlu.server --path ./models
+python -m rasa_nlu.server --path ./models
 ```
 
 **Train Rasa Core**
 ```
-python3 -m rasa_core.train -d domain.yml -s data/stories.md -o models/dialogue -c policy.yml
+python -m rasa_core.train -d domain.yml -s data/stories.md -o models/dialogue -c policy.yml
 ```
 **To run the custom action**
 ```
-python3 -m rasa_core_sdk.endpoint --actions actions
+python -m rasa_core_sdk.endpoint --actions actions
 ```
 
 **Run Rasa Core**
 ```
-python3 -m rasa_core.run -d models/dialogue -u models/current/nlu --endpoints endpoints.yml
+python -m rasa_core.run -d models/dialogue -u models/current/nlu --endpoints endpoints.yml
 ```
 ***Out Put*** 
 ```
